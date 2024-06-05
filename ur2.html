@@ -1,0 +1,100 @@
+<DOCTYPE html>
+<html lang="en">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            background-color: rgb(120, 173, 50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+        }
+    </style>
+    <body>
+
+        <h2>Formulario de Registro</h2>
+        <h2>Pagina del chef Lui Sierras Gutierrez</h2>
+        
+        <form id="registro">
+          Nombre:<br>
+          <input type="text" id="nombre">
+          <br>
+          Apellido Paterno:<br>
+          <input type="text" id="apellidoPaterno">
+          <br>
+          Apellido Materno:<br>
+          <input type="text" id="apellidoMaterno">
+          <br>
+          Fecha de Nacimiento:<br>
+          <input type="date" id="fechaNacimiento">
+          <br><br>
+          <input type="button" value="Generar Correo" onclick="generarCorreo()">
+        </form> 
+        
+        <p id="correo"></p>
+        
+        <script>
+        function generarCorreo() {
+          var nombre = document.getElementById("nombre").value;
+          var apellidoPaterno = document.getElementById("apellidoPaterno").value;
+          var apellidoMaterno = document.getElementById("apellidoMaterno").value;
+          var fechaNacimiento = new Date(document.getElementById("fechaNacimiento").value);
+          
+          var correo = nombre.charAt(0) + apellidoPaterno.charAt(0) + apellidoMaterno.slice(-2) + fechaNacimiento.getFullYear().toString().slice(-2) + (fechaNacimiento.getMonth()+1).toString() + "@gmail.com";
+          
+          document.getElementById("correo").innerHTML = "Tu correo generado es: " + correo;
+
+          
+        
+         
+          alert("Tu correo generado es: " + correo);
+                window.location.href = " https://yrcalla.github.io/ur3/ur3.html";
+        }
+        </script>
+        
+        <head>
+            <style>
+                .footer {
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    width: auto;
+                    background-color: #888231;
+                    color: black;
+                    text-align: left;
+                    padding: 10px;
+                }
+            </style>
+        </head>
+        <body>
+        
+            <div class="footer">
+             
+                <p>Derechos de autor &copy; 2024  chef Lui Sierras Gutierrez</p>
+                <p><a href="/politica-privacidad">Política de privacidad</a></p>
+               
+            </div>
+        
+        </body>
+        
+        </body>
+
+
+
+
+
+
+
+
+
+</html>
+</DOCTYPE>
